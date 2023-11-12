@@ -1,19 +1,13 @@
 
 package View;
 
-import Controller.DAOhd;
-import Controller.DAOnv;
-import Controller.DAOsp;
-import Controller.DAOspCT;
-import Controller.socketConnect;
-import Model.M_Hoadon;
-import Model.M_Nhanvien;
-import Model.M_Sanpham;
-import Model.M_SanphamCT;
+
+import Controller.*;
+import Model.*;
 import java.awt.Color;
 import java.awt.Font;
 import java.util.List;
-//import java.net.Socket;
+
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
@@ -41,6 +35,7 @@ public class MainFrame extends javax.swing.JFrame {
         initComponents();
         this.Show();
         init();
+
         
              
         this.setLocationRelativeTo(null);
@@ -66,6 +61,7 @@ public class MainFrame extends javax.swing.JFrame {
         
     }
       private void init(){
+
           categories=new String[product.countCategories()];
           setCat();
           SPCTTable();
@@ -1502,6 +1498,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                M_DBconnect.loadConnection();
                 new MainFrame().setVisible(true);
                 
             }

@@ -4,6 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/DOAN/PBL4/CLIENT/src/View/MainFrame.java</file>
+            <file>file:/D:/PBL/PBL4/CLIENT/src/Controller/DAOspCT.java</file>
+            <file>file:/D:/PBL/PBL4/CLIENT/src/Controller/socketConnect.java</file>
+            <file>file:/D:/PBL/PBL4/CLIENT/src/Controller/DAOhd.java</file>
+            <file>file:/D:/PBL/PBL4/CLIENT/src/Controller/DAOsp.java</file>
+            <file>file:/D:/PBL/PBL4/CLIENT/src/View/MainFrame.java</file>
+            <file>file:/D:/PBL/PBL4/CLIENT/src/Controller/C_checkLogin.java</file>
+            <file>file:/D:/PBL/PBL4/CLIENT/src/Model/M_DBconnect.java</file>
+            <file>file:/D:/PBL/PBL4/CLIENT/src/View/Login.java</file>
+            <file>file:/D:/PBL/PBL4/CLIENT/src/Controller/DAOnv.java</file>
         </group>
     </open-files>
 </project-private>
