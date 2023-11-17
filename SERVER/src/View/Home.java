@@ -560,36 +560,36 @@ public class Home extends javax.swing.JFrame {
 //CRUD DATA+++++++++++++++++++++++++++++++++++++++
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
-        M_Nhanvien nv=new M_Nhanvien();
-        nv.setManv(txtMa.getText());
-        nv.setTennv(txtTen.getText());
-        nv.setChucvu(cbbChucvu.getSelectedItem().toString());
-        nv.setDate(jDate.getDate());
-        nv.setDiachi(txtDiachi.getText());
-        nv.setEmail(txtEmail.getText());
-        String gt="";
-        if(rdNam.isSelected()) gt="Nam"; 
-        else gt="Nữ";
-        nv.setGt(gt);
-        boolean isOK=true;
-        try{
-            nv.setLuong(Integer.parseInt(txtLuong.getText()));
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Lương phải nhập số");
-            isOK=false;
-        }
-        if(isOK){
-            new DAOnv().AddNV(nv);
-            showTableDATA();
-            try {
-                for (Socket client : sv.clientList) {
-                    sv.SendDATA(client, model);
-                    JOptionPane.showMessageDialog(this, "Them thanh cong");
-                }
-                
-            }catch(Exception e ){e.printStackTrace();
-            }
-        }
+//        M_Nhanvien nv=new M_Nhanvien();
+//        nv.setManv(txtMa.getText());
+//        nv.setTennv(txtTen.getText());
+//        nv.setChucvu(cbbChucvu.getSelectedItem().toString());
+//        nv.setDate(jDate.getDate());
+//        nv.setDiachi(txtDiachi.getText());
+//        nv.setEmail(txtEmail.getText());
+//        String gt="";
+//        if(rdNam.isSelected()) gt="Nam"; 
+//        else gt="Nữ";
+//        nv.setGt(gt);
+//        boolean isOK=true;
+//        try{
+//            nv.setLuong(Integer.parseInt(txtLuong.getText()));
+//        }catch(Exception e){
+//            JOptionPane.showMessageDialog(this, "Lương phải nhập số");
+//            isOK=false;
+//        }
+//        if(isOK){
+//            new DAOnv().AddNV(nv);
+//            showTableDATA();
+//            try {
+//                for (Socket client : sv.clientList) {
+////                    sv.SendDATA(client, model);
+//                    JOptionPane.showMessageDialog(this, "Them thanh cong");
+//                }
+//                
+//            }catch(Exception e ){e.printStackTrace();
+//            }
+//        }
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
@@ -685,26 +685,26 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_TableNVMouseClicked
 //CLIENT+++++++++++++++++++++++++++++++++++++++
     private void btnSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendActionPerformed
-        // TODO add your handling code here:
-        if(txtSend.getText()==""){
-            JOptionPane.showMessageDialog(null, "Bạn chưa nhập thông tin");
-        }
-        else{
-            try {
-                modelList.addElement("Server: " + txtSend.getText());
-                ListStatus.setModel(modelList);
-                String mess = txtSend.getText();
-                
-                
-                for (Socket client : sv.clientList) {
-                    sv.SendMess(client, mess);
-                    JOptionPane.showMessageDialog(this, "Them thanh cong");
-                }
-              
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, e);
-            }
-        }
+//        // TODO add your handling code here:
+//        if(txtSend.getText()==""){
+//            JOptionPane.showMessageDialog(null, "Bạn chưa nhập thông tin");
+//        }
+//        else{
+//            try {
+//                modelList.addElement("Server: " + txtSend.getText());
+//                ListStatus.setModel(modelList);
+//                String mess = txtSend.getText();
+//                
+//                
+//                for (Socket client : sv.clientList) {
+//                    sv.SendMess(client, mess);
+//                    JOptionPane.showMessageDialog(this, "Them thanh cong");
+//                }
+//              
+//            } catch (Exception e) {
+//                JOptionPane.showMessageDialog(null, e);
+//            }
+//        }
     }//GEN-LAST:event_btnSendActionPerformed
 
     /**
